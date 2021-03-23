@@ -1,0 +1,58 @@
+/* Dashboard */
+.dashboard {
+        
+    .activity-list {
+        list-style-type: none;
+        padding: 0;
+        margin: 0;
+        position: relative;
+        
+        li {
+            border-bottom: 1px solid $dividerColor;
+            padding: 16px 8px;
+            
+            .count {
+                font-size: 24px;
+                color: #ffffff;
+                background-color: #007be5;
+                font-weight: 700;
+                display: inline-block;
+                padding: .25em .5em;
+                @include border-radius($borderRadius);
+            }
+            
+            // &:first-child {
+            //     border-top: 1px solid $dividerColor;
+            // }
+            
+            &:last-child {
+                border: 0;
+            }
+
+            .p-g-6:first-child {
+                font-size: 18px;
+                padding-left: 0;
+            }
+            
+            .p-g-6:last-child {
+                text-align: right;
+                color: $textSecondaryColor;
+            }
+        }
+
+        .shift-item {
+            position: absolute;
+            border: solid 1px $dividerColor;
+            color: $dividerColor;
+            background-color: #007be5;
+            left: 60px;
+            top: 50px;
+            width: 200px;
+            padding: 10px;
+            @include border-radius($borderRadius);
+            a {
+                cursor: pointer; 
+            }
+        }
+    }
+}
