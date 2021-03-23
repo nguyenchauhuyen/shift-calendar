@@ -5,7 +5,7 @@ import moment from 'moment';
 export const fetchShiftByDate = date => {
   return async dispatch => {
     try {
-      let dateString = moment(date).utc().toISOString();
+      let dateString = moment(date).format('YYYY-MM-DD');
       const res = await callApi(`shifts?date=${dateString}`, 'GET');
       dispatch({
         type: Types.FETCH_SHIFTS,
